@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AeroSound Pro — Next Gen Audio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">        
+</head>
+<body class="bg-gradient-animate text-white min-h-screen">
+
+    <div class="noise-overlay"></div>
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 px-6 py-4 backdrop-blur-md bg-black/20 border-b border-white/5">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <div class="flex items-center gap-2">
+                <div class="w-8 h-8 rounded-lg bg-gradient-to-br from-indigo-500 to-purple-600 flex items-center justify-center font-bold text-sm">A</div>
+                <span class="font-bold text-lg tracking-tight">AeroSound</span>
+            </div>
+            <div class="hidden md:flex items-center gap-8 text-sm text-gray-400">
+                <a href="#features" class="hover:text-white transition-colors">Features</a>
+                <a href="#specs" class="hover:text-white transition-colors">Specs</a>
+                <a href="#reviews" class="hover:text-white transition-colors">Reviews</a>
+            </div>
+            <button class="btn-shine px-5 py-2 rounded-full bg-white text-black text-sm font-semibold hover:scale-105 transition-transform">
+                Pre-order $299
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative pt-32 pb-20 px-6 overflow-hidden">
+        <!-- Background elements -->
+        <div class="absolute top-20 left-10 w-72 h-72 bg-purple-600/20 rounded-full blur-3xl"></div>
+        <div class="absolute bottom-20 right-10 w-96 h-96 bg-indigo-600/20 rounded-full blur-3xl"></div>
+
+        <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-12 items-center">
+            
+            <!-- Left Content -->
+            <div class="space-y-8 z-10">
+                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/5 border border-white/10 text-xs text-gray-300">
+                    <span class="w-2 h-2 rounded-full bg-green-400 animate-pulse"></span>
+                    Now available for pre-order
+                </div>
+                
+                <h1 class="text-5xl md:text-7xl font-bold leading-tight">
+                    Sound in <br>
+                    <span class="bg-gradient-to-r from-indigo-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">Three Dimensions</span>
+                </h1>
+                
+                <p class="text-gray-400 text-lg max-w-md leading-relaxed">
+                    Experience audio that moves with you. Spatial audio technology meets 48-hour battery life in a design that defies gravity.
+                </p>
+
+                <div class="flex flex-wrap gap-4">
+                    <button class="btn-shine px-8 py-4 rounded-full bg-gradient-to-r from-indigo-600 to-purple-600 font-semibold hover:scale-105 transition-transform shadow-lg shadow-indigo-500/25">
+                        Pre-order Now — $299
+                    </button>
+                    <button class="px-8 py-4 rounded-full border border-white/20 hover:bg-white/5 transition-colors font-medium">
+                        Watch Demo
+                    </button>
+                </div>
+
+                <div class="flex items-center gap-6 pt-4 text-sm text-gray-500">
+                    <div class="flex -space-x-2">
+                        <div class="w-8 h-8 rounded-full bg-gray-700 border-2 border-black"></div>
+                        <div class="w-8 h-8 rounded-full bg-gray-600 border-2 border-black"></div>
+                        <div class="w-8 h-8 rounded-full bg-gray-500 border-2 border-black"></div>
+                    </div>
+                    <p>Trusted by 10,000+ audiophiles</p>
+                </div>
+            </div>
+
+            <!-- Right Content — 3D Card -->
+            <div class="flex justify-center items-center py-10">
+                <div class="card-container w-full max-w-md" id="cardContainer">
+                    <div class="card-glow"></div>
+                    <div class="card-3d floating bg-gradient-to-br from-gray-900 to-black rounded-3xl p-8 border border-white/10 shadow-2xl relative overflow-hidden" id="tiltCard">
+                        
+                        <!-- Card inner content -->
+                        <div class="relative z-10">
+                            <!-- Badge -->
+                            <div class="text-layer-3 flex justify-between items-start mb-6">
+                                <span class="px-3 py-1 rounded-full bg-white/10 text-xs font-medium backdrop-blur-sm">Pro Edition</span>
+                                <span class="text-2xl font-bold">$299</span>
+                            </div>
+
+                            <!-- Product Image (SVG placeholder — replace with your image) -->
+                            <div class="text-layer-1 flex justify-center mb-8">
+                                <svg class="product-image w-64 h-64" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <!-- Headphones illustration -->
+                                    <defs>
+                                        <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+                                            <stop offset="0%" style="stop-color:#667eea;stop-opacity:1" />
+                                            <stop offset="100%" style="stop-color:#764ba2;stop-opacity:1" />
+                                        </linearGradient>
+                                        <linearGradient id="grad2" x1="0%" y1="0%" x2="100%" y2="0%">
+                                            <stop offset="0%" style="stop-color:#f093fb;stop-opacity:1" />
+                                            <stop offset="100%" style="stop-color:#f5576c;stop-opacity:1" />
+                                        </linearGradient>
+                                    </defs>
+                                    <!-- Headband -->
+                                    <path d="M50 100 C50 40, 150 40, 150 100" stroke="url(#grad1)" stroke-width="8" fill="none" stroke-linecap="round"/>
+                                    <!-- Left earcup -->
+                                    <rect x="30" y="85" width="40" height="50" rx="20" fill="url(#grad1)" opacity="0.9"/>
+                                    <rect x="35" y="90" width="30" height="40" rx="15" fill="#1a1a2e"/>
+                                    <!-- Right earcup -->
+                                    <rect x="130" y="85" width="40" height="50" rx="20" fill="url(#grad2)" opacity="0.9"/>
+                                    <rect x="135" y="90" width="30" height="40" rx="15" fill="#1a1a2e"/>
+                                    <!-- Connector details -->
+                                    <circle cx="50" cy="110" r="5" fill="white" opacity="0.5"/>
+                                    <circle cx="150" cy="110" r="5" fill="white" opacity="0.5"/>
+                                    <!-- Sound waves -->
+                                    <path d="M20 110 Q10 110 10 100 Q10 90 20 90" stroke="white" stroke-width="2" fill="none" opacity="0.3"/>
+                                    <path d="M180 110 Q190 110 190 100 Q190 90 180 90" stroke="white" stroke-width="2" fill="none" opacity="0.3"/>
+                                </svg>
+                            </div>
+
+                            <!-- Product Info -->
+                            <div class="text-layer-2 space-y-3">
+                                <h3 class="text-2xl font-bold">AeroSound Pro</h3>
+                                <p class="text-gray-400 text-sm">Active Noise Cancellation • Spatial Audio • 48h Battery</p>
+                                
+                                <div class="flex gap-2 pt-2">
+                                    <span class="w-6 h-6 rounded-full bg-gray-800 border border-white/20 cursor-pointer hover:scale-110 transition-transform"></span>
+                                    <span class="w-6 h-6 rounded-full bg-indigo-600 border border-white/20 cursor-pointer hover:scale-110 transition-transform"></span>
+                                    <span class="w-6 h-6 rounded-full bg-purple-600 border border-white/20 cursor-pointer hover:scale-110 transition-transform"></span>
+                                </div>
+                            </div>
+
+                            <!-- CTA inside card -->
+                            <div class="text-layer-3 mt-6 pt-6 border-t border-white/10">
+                                <button class="w-full py-3 rounded-xl bg-white/10 hover:bg-white/20 transition-colors text-sm font-semibold backdrop-blur-sm">
+                                    Add to Cart
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Decorative elements -->
+                        <div class="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-indigo-500/20 to-transparent rounded-full blur-2xl"></div>
+                        <div class="absolute bottom-0 left-0 w-24 h-24 bg-gradient-to-tr from-purple-500/20 to-transparent rounded-full blur-2xl"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="py-20 px-6">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16 reveal">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Engineered for Excellence</h2>
+                <p class="text-gray-400 max-w-2xl mx-auto">Every detail meticulously crafted to deliver an unparalleled listening experience.</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-6">
+                <div class="feature-card rounded-2xl p-8 reveal">
+                    <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-indigo-500 to-purple-600 flex items-center justify-center mb-6">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.384-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Spatial Audio</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">Dolby Atmos integration creates a three-dimensional soundstage that adapts to your head movements in real-time.</p>
+                </div>
+
+                <div class="feature-card rounded-2xl p-8 reveal">
+                    <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-purple-500 to-pink-600 flex items-center justify-center mb-6">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">48-Hour Battery</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">Industry-leading battery life with fast-charge technology. 10 minutes of charging delivers 5 hours of playback.</p>
+                </div>
+
+                <div class="feature-card rounded-2xl p-8 reveal">
+                    <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-pink-500 to-rose-600 flex items-center justify-center mb-6">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">ANC Pro</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">Adaptive noise cancellation that automatically adjusts to your environment, blocking up to 98% of ambient noise.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Specs Section -->
+    <section id="specs" class="py-20 px-6 bg-black/20">
+        <div class="max-w-5xl mx-auto">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="reveal">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-6">Technical Specifications</h2>
+                    <div class="space-y-4">
+                        <div class="flex justify-between py-3 border-b border-white/10">
+                            <span class="text-gray-400">Driver Size</span>
+                            <span class="font-semibold">40mm Titanium</span>
+                        </div>
+                        <div class="flex justify-between py-3 border-b border-white/10">
+                            <span class="text-gray-400">Frequency Response</span>
+                            <span class="font-semibold">4Hz – 40kHz</span>
+                        </div>
+                        <div class="flex justify-between py-3 border-b border-white/10">
+                            <span class="text-gray-400">Connectivity</span>
+                            <span class="font-semibold">Bluetooth 5.3 / USB-C</span>
+                        </div>
+                        <div class="flex justify-between py-3 border-b border-white/10">
+                            <span class="text-gray-400">Weight</span>
+                            <span class="font-semibold">254g</span>
+                        </div>
+                        <div class="flex justify-between py-3 border-b border-white/10">
+                            <span class="text-gray-400">Charging Time</span>
+                            <span class="font-semibold">2 hours (full)</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="reveal relative">
+                    <div class="absolute inset-0 bg-gradient-to-r from-indigo-600/20 to-purple-600/20 rounded-3xl blur-3xl"></div>
+                    <div class="relative bg-gradient-to-br from-gray-900 to-black rounded-3xl p-8 border border-white/10">
+                        <div class="text-center space-y-4">
+                            <div class="text-6xl font-bold bg-gradient-to-r from-indigo-400 to-purple-400 bg-clip-text text-transparent">98%</div>
+                            <p class="text-gray-400">Noise Cancellation Efficiency</p>
+                            <div class="h-2 bg-gray-800 rounded-full overflow-hidden mt-4">
+                                <div class="h-full bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full" style="width: 98%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-12 px-6 border-t border-white/5">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
+            <div class="flex items-center gap-2">
+                <div class="w-8 h-8 rounded-lg bg-gradient-to-br from-indigo-500 to-purple-600 flex items-center justify-center font-bold text-sm">A</div>
+                <span class="font-bold">AeroSound</span>
+            </div>
+            <p class="text-gray-500 text-sm"> 2026 AeroSound Technologies. All rights reserved.</p>
+            <div class="flex gap-6 text-sm text-gray-500">
+                <a href="#" class="hover:text-white transition-colors">Privacy</a>
+                <a href="#" class="hover:text-white transition-colors">Terms</a>
+                <a href="#" class="hover:text-white transition-colors">Support</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js">
+       
+    </script>
+</body>
+</html>
